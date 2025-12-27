@@ -1,8 +1,7 @@
-import Client from '@upstash/workflow';
+import { Client as WorkflowClient } from '@upstash/workflow';
+import { QSTASH_TOKEN, QSTASH_URL } from './env.js';
 
-import { QSTASH_URL, QSTASH_TOKEN, QSTASH_CURRENT_SIGNING_KEY, QSTASH_NEXT_SIGNING_KEY } from '../config/env.js';
-
-export const workflowClient = new workflowClient({
-    baseUrl: QSTASH_URL,
-    token: QSTASH_TOKEN,
+export const workflowClient = new WorkflowClient({
+  baseUrl: QSTASH_URL,
+  token: QSTASH_TOKEN,
 });
